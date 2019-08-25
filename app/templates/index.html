@@ -7,9 +7,20 @@
     <meta name="author" content="Jeremy">
     <link rel="stylesheet" href="/static/css/styles-1.0.0.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+    .crossword-grid {
+      margin: 100px;
+    }
+    .grid-item {
+    width: 40px;
+    height: 40px;
+    font-size: 14px;
+    padding: 10px;
+    }
+    </style>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <a class="navbar-brand" href="#">roboXwords</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -25,26 +36,23 @@
         </ul>
       </div>
     </nav>
-    <div class="grid-container">
-      <div class="grid-item">1</div>
-      <div class="grid-item">2</div>
-      <div class="grid-item">3</div>
-      <div class="grid-item">4</div>
-      <div class="grid-item">5</div>
-      <div class="grid-item">6</div>
-      <div class="grid-item">7</div>
-      <div class="grid-item">8</div>
-      <div class="grid-item">9</div>
-      <div class="grid-item">1</div>
-      <div class="grid-item">2</div>
-      <div class="grid-item">3</div>
-      <div class="grid-item">4</div>
-      <div class="grid-item">5</div>
-      <div class="grid-item">6</div>
-      <div class="grid-item">7</div>
-      <div class="grid-item">8</div>
-      <div class="grid-item">9</div>
-    </div>
+    <table class="crossword-grid">
+      <tr>
+        <th class="grid-item">1</td>
+        <td class="grid-item">2</td> 
+        <td class="grid-item">3</td>
+      </tr>
+      <tr>
+        <td class="grid-item">4</td>
+        <td class="grid-item">5</td> 
+        <td class="grid-item">6</td>
+      </tr>
+      <tr>
+        <td class="grid-item">7</td>
+        <td class="grid-item">8</td> 
+        <td class="grid-item">9</td>
+      </tr>
+    </table>
     <script src="js/scripts-1.0.0.js"></script>
   </body>
 </html>
