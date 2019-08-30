@@ -1,0 +1,7 @@
+.vscode/
+.snakemake/
+.pytest_cache/
+checkpoint/
+models/
+.DS_Store
+model.pkl

@@ -1,6 +1,4 @@
 # ai_crosswords
 generate crosswords with the power of AI 🦄✨
 
-This is the front-end. The crosswords are generated in another script, in another repo.
-
-`make` serves the development server.
+`make` in the root directory serves the development server; `make` in the "crosswordgen" directory does the web scraping, training and crossword generation.
