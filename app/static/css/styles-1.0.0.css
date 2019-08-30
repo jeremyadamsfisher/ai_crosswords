@@ -35,7 +35,6 @@ body {
 .crossword-box p {
   margin-top: 4px;
   text-align: center;
-  border-style: 
 }
 .filled { background: black; }
 .numbered { counter-increment: value; }
