@@ -7,7 +7,7 @@ body {
 }
 #footer {
   width: 100%;
-  padding: 100px;
+  padding: 50px;
   background: #f5f5f5;
 }
 .spacy {
@@ -44,14 +44,6 @@ body {
   font-size: 10px;
   position: absolute;
 }
-#crossword-hints-wrapper {
-  display: grid;
-  grid-template-columns: 1fr auto 10px auto 1fr;
+#show-another-wrapper {
+  margin: 50px;
 }
-#crossword-hints-wrapper ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-#hints-across {grid-column: 2;}
-#hints-down {grid-column: 4;}

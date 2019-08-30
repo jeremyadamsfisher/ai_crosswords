@@ -7,6 +7,9 @@
     <meta name="author" content="Jeremy">
     <link rel="stylesheet" href="/static/css/styles-1.0.0.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+    {% block style %}{% endblock %}
+    </style>
   </head>
   <body>
     <nav class="navbar navbar-dark bg-dark"><a class="navbar-brand" href="#">robo✜words</a></nav>
@@ -15,7 +18,7 @@
     </div>
     <div id="footer">
       <h3>What am I looking at? 🤷</h3>
-      <p>Good question! These are normal, valid crosswords generated entirely by a computer. The words were laid out algorithmically and a <a href="https://github.com/openai/gpt-2">language model</a>, trained on years of crossword hints, predicts the corresponding hint.</p>
+      <p>These are normal, valid crosswords generated entirely by a computer. The words were laid out algorithmically and a <a href="https://github.com/openai/gpt-2">language model</a>, trained on years of crossword hints, predicts the corresponding hint.</p>
       <div id="show-another-wrapper" style="text-align: center;">
         <a href="/" class="btn btn-primary">Show me another!</a>
       </div>
