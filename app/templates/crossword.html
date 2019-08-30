@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block content %}
+<div id="crossword-wrapper" class="spacy">
+  <div id="crossword-container">
+      {% for elem in flattened_grid %}
+        {% if elem %}
+          {% if loop.index - 1 in flatted_grid_word_origins %}
+            <div class="crossword-box numbered"><p>{{elem}}</p></div>
+          {% else %}
+            <div class="crossword-box"><p>{{elem}}</p></div>
+          {% endif %}
+        {% else %}
+          <div class="crossword-box filled"></div>
+        {% endif %}
+      {% endfor %}
+    </div>
+</div>
+<div id="crossword-hints-wrapper" class="spacy">
+  <div id="hints-across">
+      <h3>Across</h3>
+      <ul>
+        {% for hint, counter_number, _, word in hint_info_across %}
+        <li>{{ counter_number }}: {{ hint }} ANSWER: {{word}}</li>
+        {% endfor %}
+      </ul>
+    </div>
+    <div id="hints-down">
+      <h3>Down</h3>
+      <ul>
+        {% for hint, counter_number, _, word in hint_info_down %}
+        <li>{{ counter_number }}: {{ hint }} ANSWER: {{word}}</li>
+        {% endfor %}
+      </ul>
+    </div>
+</div>
+{% endblock %}

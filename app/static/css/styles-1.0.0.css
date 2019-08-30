@@ -1,16 +1,57 @@
-@media screen and (max-width: 600px) {
-  .column {
-    width: 100%;
-  }
+body { 
+  margin:0;
+  font-family: "Oswald", Helvetica, Arial, sans-serif
 }
-.column {
-  float: left;
-  width: 50%;
+#content {
   padding: 10px;
-  height: 300px; /* Should be removed. Only for demonstration */
 }
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
+#footer {
+  width: 100%;
+  padding: 100px;
+  background: #f5f5f5;
 }
+.spacy {
+  margin: 25px;
+}
+#crossword-wrapper {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+}
+/* crossword styling adapted from https://codepen.io/bornyesterday/pen/epadpa */
+#crossword-container {
+  grid-column: 2;
+  width: 377px;
+  height: 377px;
+  border: 1px solid black;
+}
+.crossword-box {
+  width: 25px;
+  height: 25px;
+  border: 1px solid black;
+  padding: 0;
+  margin: 0;
+  float: left;
+}
+.crossword-box p {
+  margin-top: 4px;
+  text-align: center;
+  border-style: 
+}
+.filled { background: black; }
+.numbered { counter-increment: value; }
+.numbered:nth-of-type(n)::before {
+  content: counter(value);
+  font-size: 10px;
+  position: absolute;
+}
+#crossword-hints-wrapper {
+  display: grid;
+  grid-template-columns: 1fr auto 10px auto 1fr;
+}
+#crossword-hints-wrapper ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+#hints-across {grid-column: 2;}
+#hints-down {grid-column: 4;}

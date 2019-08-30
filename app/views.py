@@ -47,7 +47,7 @@ def show_crossword():
     ]
     print(flatted_grid_word_origins)
     return render_template(
-        "index.html",
+        "crossword.html",
         flattened_grid=flattened_grid,
         flatted_grid_word_origins=flatted_grid_word_origins,
         hint_info_across=hint_info_across,

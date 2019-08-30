@@ -2,70 +2,23 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>{% block title %}{% endblock %}</title>
+    <title>AI Crossword Generator</title>
     <meta name="description" content="ML generated crosswords">
     <meta name="author" content="Jeremy">
     <link rel="stylesheet" href="/static/css/styles-1.0.0.css">
-    <style>
-    body { 
-      margin:0;
-      font-family: "Oswald", Helvetica, Arial, sans-serif
-    }
-    #content {
-      padding: 10px;
-    }
-    .nav-container {
-      margin: 0px;
-      width: 100%;
-      background: black;
-    }
-    nav {
-      max-width: 1720px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: auto 1fr auto;
-    }
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-family: 'Oswald', sans-serif;
-      transition: .3s all ease-in-out;
-    }
-    nav a:hover {
-      opacity: .7;
-    }
-    .right-menu {
-      grid-column: 3;
-    }
-    .right-menu a {
-      padding: 10px 0;
-      margin-right: 15px;
-      font-size: 14px;
-      font-weight: 300;
-      letter-spacing: 0.5px;
-    }
-    .logo {
-      grid-column: 1;
-      font-size: 40px;
-      padding: 1rem;
-    }
-    {% block style %}{% endblock %}
-    </style>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   </head>
   <body>
-    <div class="nav-container">
-      <nav>
-        <a href="#" class="logo">robo✜words</a>
-        <div class="right-menu">
-          <ul>
-            <li><a href="#">give me a crossword</a></li>
-            <li><a href="#">huh?</a></li>
-          </ul>
-        </div>
-      </nav>
-    </div>
+    <nav class="navbar navbar-dark bg-dark"><a class="navbar-brand" href="#">robo✜words</a></nav>
     <div id="content">
     {% block content %}{% endblock %}
+    </div>
+    <div id="footer">
+      <h3>What am I looking at? 🤷</h3>
+      <p>Good question! These are normal, valid crosswords generated entirely by a computer. The words were laid out algorithmically and a <a href="https://github.com/openai/gpt-2">language model</a>, trained on years of crossword hints, predicts the corresponding hint.</p>
+      <div id="show-another-wrapper" style="text-align: center;">
+        <a href="/" class="btn btn-primary">Show me another!</a>
+      </div>
     </div>
     <script src="js/scripts-1.0.0.js"></script>
   </body>
