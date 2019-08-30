@@ -4,15 +4,16 @@ from pathlib import Path
 from flask import render_template
 from app import app
 
-crosswords = list(Path(".").glob("crossword-*.json"))
-
-with crosswords[0].open() as f:
-    sample_crossword = json.load(f)
+crosswords = []
+for crossword_fp in Path(".").glob("crossword-*.json"):
+    with crossword_fp.open() as f:
+        crosswords.append(json.load(f))
 
 @app.route('/')
 def show_crossword():
-    grid = sample_crossword["grid"]
-    word_informations = sample_crossword["words"]
+    crossword = random.choice(crosswords)
+    grid = crossword["grid"]
+    word_informations = crossword["words"]
     words = set()
     word_origins = set()
     word_to_origin = {}
@@ -45,7 +46,6 @@ def show_crossword():
     flatted_grid_word_origins = [
         origin_y * grid_len + origin_x for (origin_x, origin_y) in word_origins
     ]
-    print(flatted_grid_word_origins)
     return render_template(
         "crossword.html",
         flattened_grid=flattened_grid,

@@ -12,13 +12,19 @@
     </style>
   </head>
   <body>
-    <nav class="navbar navbar-dark bg-dark"><a class="navbar-brand" href="#">robo✜words</a></nav>
+    <nav class="navbar navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">robo✜words</a>
+      <span class="navbar-text">
+        ml generated crosswords
+      </span>
+    </nav>
     <div id="content">
     {% block content %}{% endblock %}
     </div>
     <div id="footer">
       <h3>What am I looking at? 🤷</h3>
       <p>These are normal, valid crosswords generated entirely by a computer. The words were laid out algorithmically and a <a href="https://github.com/openai/gpt-2">language model</a>, trained on years of crossword hints, predicts the corresponding hint.</p>
+      <p>The code for </p>
       <div id="show-another-wrapper" style="text-align: center;">
         <a href="/" class="btn btn-primary">Show me another!</a>
       </div>
