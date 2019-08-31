@@ -386,10 +386,12 @@ def main(wordlist_fp: Path, grid_len: int, n_crosswords: int):
             for line in f
             if min_len <= len(line.strip()) <= max_lex
         }
+    outpath = Path("./output")
+    outpath.mkdir(exists_ok=True)
     for i in range(n_crosswords):
         print(f"Building crossword {i}/{n_crosswords}")
         crossword = create_crossword(english_word_set, grid_len=grid_len)
-        with open(f"crossword-{uuid.uuid4()}.json", "w") as f:
+        with (outpath/f"crossword-{uuid.uuid4()}.json").open("w") as f:
             json.dump(crossword.to_dict(), f)
 
 
