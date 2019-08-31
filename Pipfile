@@ -4,6 +4,12 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 
 [dev-packages]
+snakemake = "*"
+tqdm = "*"
+gpt-2-simple = "*"
+pytest = "*"
+black = "*"
+pylint = "*"
 
 [packages]
 flask = "*"
