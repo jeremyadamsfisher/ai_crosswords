@@ -5,7 +5,7 @@ from flask import render_template
 from app import app
 
 crosswords = []
-for crossword_fp in Path(".").glob("crossword-*.json"):
+for crossword_fp in Path("./crosswordgen/output").glob("crossword-*.json"):
     with crossword_fp.open() as f:
         crosswords.append(json.load(f))
 

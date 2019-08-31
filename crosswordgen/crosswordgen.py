@@ -24,9 +24,17 @@ from itertools import count
 from tqdm import tqdm
 import gpt_2_simple as gpt2
 
-sess = gpt2.start_tf_sess()
-gpt2.load_gpt2(sess)
+class WorkflowError(Exception):
+    """if something in the workflow is run out of sequence"""
 
+sess = gpt2.start_tf_sess()
+try:
+    gpt2.load_gpt2(sess)
+except FileNotFoundError:
+    raise WorkflowError(
+        "Cannot find GPT-2 checkpoint. Try running "
+        "the snakemake workflow before using this tool."
+    )
 
 def cli() -> dict:
     """command line interface"""
