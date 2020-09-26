@@ -8,7 +8,7 @@ pytest = "*"
 black = "==18.3a0"
 pylint = "*"
 gpt-2-simple = "==0.5.4"
-tensorflow = "==1.14.0"
+tensorflow = "==1.15.4"
 
 [packages]
 flask = "*"
